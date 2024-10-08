@@ -54,11 +54,9 @@ public class Shot implements Runnable{
     public boolean isLive() {
         return isLive;
     }
-    
     public void setLive(boolean live) {
         isLive = live;
     }
-    
     public int getDirection() {
         return direction;
     }

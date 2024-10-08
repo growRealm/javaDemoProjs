@@ -1,13 +1,13 @@
 package com.growRealm.pojo;
 
 /**
- * 坦克实体
+ * 坦克实体：EnemyTank和HeroTank都继承这个类
  */
 public class Tank {
     private int x;
     private int y;
-    private int direction;//坦克方向0-上 1-右 2-下 3-左
-    private int speed = 1;//坦克速度
+    private int direction;// 坦克方向0-上 1-右 2-下 3-左
+    private int speed = 1;// 坦克速度
     private boolean isLive = true;
     
     public Tank(int x, int y) {
@@ -39,26 +39,29 @@ public class Tank {
         this.direction = direction;
     }
     
-    //上下左右移动方法
-    public void moveUp(){
-        //坦克不能出边界
-        if (y > 0){
-            y-=speed;
+    // 上下左右移动方法
+    public void moveUp() {
+        // 坦克不能出边界
+        if (y > 0) {
+            y -= speed;
         }
     }
-    public void moveRight(){
-        if (x + 60 < 1000){
-            x+=speed;
+    
+    public void moveRight() {
+        if (x + 60 < 1000) {
+            x += speed;
         }
     }
-    public void moveDown(){
-        if (y + 60 < 722){
-            y+=speed;
+    
+    public void moveDown() {
+        if (y + 60 < 722) {
+            y += speed;
         }
     }
-    public void moveLeft(){
-        if (x > 0){
-            x-=speed;
+    
+    public void moveLeft() {
+        if (x > 0) {
+            x -= speed;
         }
     }
     

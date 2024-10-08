@@ -12,10 +12,7 @@ import java.util.Scanner;
 
 public class TankGame extends JFrame {
     
-    private MyPanel panel;
-    
     public static void main(String[] args) {
-        
         new TankGame();
     }
     
@@ -23,7 +20,7 @@ public class TankGame extends JFrame {
         System.out.println("请输入选择： 1 表示新游戏，2是继续上局");
         Scanner scanner = new Scanner(System.in);
         //将panel放入到thread中
-        this.panel = new MyPanel(scanner.next());
+        MyPanel panel = new MyPanel(scanner.next());
         scanner.close();
         
         new Thread(panel).start();
@@ -54,7 +51,6 @@ public class TankGame extends JFrame {
                 System.exit(0);
             }
         });
-        
     }
 }
 

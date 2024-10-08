@@ -1,14 +1,14 @@
 package com.growRealm.pojo;
 
 /**
- * 一个node 对象，表示一个敌人坦克的信息
+ * 一个 EnemyTankInfo 对象，表示一个敌人坦克的信息
  */
-public class Node {
+public class EnemyTankInfo {
     private int x;
     private int y;
     private int direction;
     
-    public Node(int x, int y, int direction) {
+    public EnemyTankInfo(int x, int y, int direction) {
         this.x = x;
         this.y = y;
         this.direction = direction;
